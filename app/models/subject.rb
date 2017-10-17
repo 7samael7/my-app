@@ -11,6 +11,7 @@
 
 class Subject < ApplicationRecord
   #has_many :tests
+  has_many :topics
 
   validates :title, presence: true
   validates :code, presence: true
