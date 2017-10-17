@@ -50,6 +50,8 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rspec', '~> 3.6'
   gem 'rspec-rails', '~> 3.6', '>= 3.6.1'
+  gem 'erd', '~> 0.4.0'
+  gem 'rails-erd', '~> 1.5', '>= 1.5.2'
 end
 
 group :development do
