@@ -50,8 +50,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rspec', '~> 3.6'
   gem 'rspec-rails', '~> 3.6', '>= 3.6.1'
-  gem 'erd', '~> 0.4.0'
-  gem 'rails-erd', '~> 1.5', '>= 1.5.2'
+
 end
 
 group :development do
@@ -62,6 +61,8 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'annotate', '~> 2.7', '>= 2.7.2'
+  gem 'erd', '~> 0.4.0'
+  gem 'rails-erd', '~> 1.5', '>= 1.5.2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
