@@ -1,6 +1,8 @@
 class TestsController < ApplicationController
   before_action :set_test, only: [:show, :edit, :update, :destroy]
 
+  permits :title, :questions, :subjects_id
+
 
   def index
     @tests = Test.all
@@ -16,8 +18,8 @@ class TestsController < ApplicationController
   def edit
   end
 
-  def create
-    @test = Test.new(test_params)
+  def create(test)
+    @test = Test.new(test)
 
     if @test.save
       redirect_to @test, notice: 'Test was successfully created.'
@@ -26,8 +28,8 @@ class TestsController < ApplicationController
     end
   end
 
-  def update
-    if @test.update(test_params)
+  def update(test)
+    if @test.update(test)
       redirect_to @test, notice: 'Test was successfully updated.'
     else
       render :edit
@@ -42,12 +44,8 @@ class TestsController < ApplicationController
 
   private
 
-    def set_test
-      @test = Test.find(params[:id])
+    def set_test(id)
+      @test = Test.find(id)
     end
 
-
-    def test_params
-      params.require(:test).permit(:title, :questions, :subject_id)
-    end
 end
