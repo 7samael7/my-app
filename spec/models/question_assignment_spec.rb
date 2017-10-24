@@ -7,7 +7,8 @@
 #  updated_at :datetime         not null
 #
 
-class QuestionAssignment < ApplicationRecord
-  belongs_to :question
-  belongs_to :test
+require 'rails_helper'
+
+RSpec.describe QuestionAssignment, type: :model do
+  pending "add some examples to (or delete) #{__FILE__}"
 end
