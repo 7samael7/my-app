@@ -5,7 +5,7 @@ class TestsController < ApplicationController
 
 
   def index
-    @tests = Test.all
+    @tests = Test.with_subject_title('Webove tehnologie')
   end
 
   def generate_new

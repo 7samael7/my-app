@@ -26,4 +26,5 @@ class Test < ApplicationRecord
   validates_presence_of :title
 
   validates :title, presence: true
+  scope :with_subject_title, -> (subject) { includes([:subject]).where(subject: { title: subject }).order('created_at DESC') }
 end
