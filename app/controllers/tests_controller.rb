@@ -9,7 +9,7 @@ class TestsController < ApplicationController
   end
 
   def generate_new
-    
+
   end
 
   def generate(template_id)

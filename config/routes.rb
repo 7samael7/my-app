@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
   resources :subjects
-  resources :tests
+  resources :tests do
+    collection do
+      get :generate_new
+      post 'generate/:template_id', action: :generate
+    end
+  end
   resources :posts
 
   root to: 'dashboard#index'
